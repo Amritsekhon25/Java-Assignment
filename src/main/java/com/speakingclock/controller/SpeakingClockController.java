@@ -21,7 +21,7 @@ public class SpeakingClockController {
 private SpeakingClockService speakingClockService;
 	
 	 @GetMapping(value = "/convertTime/{time}",produces = MediaType.APPLICATION_JSON_VALUE)
-	    public ResponseEntity<String> getPointsByCustomerId(@PathVariable("time") String time){
+	    public ResponseEntity<String> convertTime(@PathVariable("time") String time){
 		 
 		String response= speakingClockService.convertTime(time);
 
